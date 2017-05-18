@@ -1,0 +1,19 @@
+newmtl templateHeadModel
+Ka 1.000 1.000 1.000
+Kd 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+illum 1
+d 1.000
+map_Kd facediffuse.png
+map_d facediffuse_alpha.png
+
+newmtl dx11Shader1
+Ka 1.000 1.000 1.000
+Kd 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+illum 1
+d 1.000
+map_Kd hair1_color.png
+map_d hair1_normal_alpha.png
+bump hair1_normal.png
+

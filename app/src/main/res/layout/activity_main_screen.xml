@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.android.xuanhong.tryonglasses.MainScreen">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, Paul"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:text="Edit Profile" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnGlasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glasses gallery"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginStart="71dp"
+        android:layout_below="@+id/btnEditProfile"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnCarts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Shopping carts"
+        android:layout_below="@+id/btnGlasses"
+        android:layout_alignLeft="@+id/btnPictures"
+        android:layout_alignStart="@+id/btnPictures" />
+
+    <Button
+        android:id="@+id/btnPictures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My pictures"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btnCarts"
+        android:layout_alignLeft="@+id/btnGlasses"
+        android:layout_alignStart="@+id/btnGlasses" />
+
+
+</RelativeLayout>

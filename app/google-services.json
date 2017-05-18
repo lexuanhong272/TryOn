@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "442386781341",
+    "firebase_url": "https://fir-78ff2.firebaseio.com",
+    "project_id": "fir-78ff2",
+    "storage_bucket": "fir-78ff2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442386781341:android:aa503c2aa8da67ce",
+        "android_client_info": {
+          "package_name": "com.android.xuanhong.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442386781341-6dejjgj5o8410j1emlm2luan4pf2547c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8vmbSBvlVAHQAcNgZApAoSMSBawj_8JA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442386781341:android:28ca0959563702fa",
+        "android_client_info": {
+          "package_name": "com.android.xuanhong.tryonglasses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442386781341-6dejjgj5o8410j1emlm2luan4pf2547c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8vmbSBvlVAHQAcNgZApAoSMSBawj_8JA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

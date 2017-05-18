@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.Light"
+    tools:context="com.android.xuanhong.tryonglasses.ForgotID">
+
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSendEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="Your Email"
+        android:inputType="textWebEmailAddress" />
+
+    <Button
+        android:id="@+id/btnSendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_alignBaseline="@+id/btnReturnMainFromForgot"
+        android:layout_alignBottom="@+id/btnReturnMainFromForgot"
+        android:layout_alignLeft="@+id/edtEmail"
+        android:layout_alignStart="@+id/edtEmail" />
+
+    <Button
+        android:id="@+id/btnReturnMainFromForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/edtEmail"
+        android:layout_alignEnd="@+id/edtEmail" />
+</RelativeLayout>

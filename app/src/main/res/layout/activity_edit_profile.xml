@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.android.xuanhong.tryonglasses.EditProfile">
+
+    <EditText
+        android:layout_centerHorizontal="true"
+        android:id="@+id/edtUpdateName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Your Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="49dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginStart="128dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_centerHorizontal="true"
+        android:id="@+id/edtUpdateEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Your email"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="99dp"
+        android:layout_below="@+id/edtUpdateName"
+        android:layout_alignLeft="@+id/edtUpdateName"
+        android:layout_alignStart="@+id/edtUpdateName"
+        android:layout_marginTop="32dp" />
+
+    <EditText
+        android:layout_centerHorizontal="true"
+        android:id="@+id/edtUpdateAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Your address"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="157dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/edtUpdateEmail"
+        android:layout_alignLeft="@+id/edtUpdateEmail"
+        android:layout_alignStart="@+id/edtUpdateEmail" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="213dp"
+        android:layout_alignTop="@+id/btnBackToMainFromEdit"
+        android:layout_alignLeft="@+id/edtUpdateAdd"
+        android:layout_alignStart="@+id/edtUpdateAdd" />
+
+    <Button
+        android:id="@+id/btnBackToMainFromEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        tools:layout_editor_absoluteX="403dp"
+        tools:layout_editor_absoluteY="213dp"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/edtUpdateAdd"
+        android:layout_alignRight="@+id/edtUpdateAdd"
+        android:layout_alignEnd="@+id/edtUpdateAdd" />
+
+
+</RelativeLayout>
