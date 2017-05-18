@@ -35,7 +35,8 @@
         <activity android:name=".Carts" />
         <activity android:name=".Pictures" />
         <activity android:name=".GlassesGallery" />
-        <activity android:name=".LoginByEmail"></activity>
+        <activity android:name=".LoginByEmail" />
+        <activity android:name=".Picture"></activity>
     </application>
 
 </manifest>
