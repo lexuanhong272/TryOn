@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Base.Animation.AppCompat.Dialog">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,19 +26,47 @@
         </activity>
         <activity
             android:name=".models.view.MenuActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".models.view.ModelActivity"
             android:label="Try on Glasses"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".ForgotID" />
-        <activity android:name=".MainScreen" />
-        <activity android:name=".EditProfile" />
-        <activity android:name=".Carts" />
-        <activity android:name=".Pictures" />
-        <activity android:name=".GlassesGallery" />
-        <activity android:name=".LoginByEmail" />
-        <activity android:name=".Picture"></activity>
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ForgotID"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainScreen"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".EditProfile"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Carts"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Pictures"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GlassesGallery"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".LoginByEmail"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Picture"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".util.GlassesGallery2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activities.Welcome"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Activities.LoginFace"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activities.LoginEmail"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,9 @@
 package com.android.xuanhong.tryonglasses.models.services;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,12 +44,17 @@ public class LoaderObjects extends LoaderScenes {
 			@Override
 			protected Void doInBackground(Void... params) {
 
+				File root = android.os.Environment.getExternalStorageDirectory();
+
 				try {
 					// 3D Axis
 					Object3DData axis = Object3DBuilder.buildAxis().setId("axis");
 					axis.setColor(new float[] { 0.0f, 0.0f, 0.0f, 1.0f });
 					axis.centerAndScale(4);
 					addObject(axis);
+
+
+
 
 
 					try {
@@ -61,6 +70,7 @@ public class LoaderObjects extends LoaderScenes {
 
 					try {
 						objGlass = Object3DBuilder.loadV5(parent.getAssets(), "models/", "glasses2.obj");
+
 						objGlass.centerAndScale(1.3f);
 						//objGlass.setRotation(new float[] {0, 180, 0});
 						objGlass.setPosition(new float[] { 0f, 0.5f, -0.3f });

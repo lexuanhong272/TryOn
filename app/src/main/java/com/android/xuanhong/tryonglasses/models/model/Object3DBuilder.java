@@ -20,6 +20,7 @@ import org.apache.commons.io.IOUtils;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
@@ -366,6 +367,41 @@ public final class Object3DBuilder {
 						.put(cubeTextureCoordinateData).asReadOnlyBuffer(),
 				textureData).setDrawMode(GLES20.GL_TRIANGLES).setId("cubeV4").centerAndScale(1.0f);
 	}
+
+	public static Object3DData loadV6(String path, String name) {
+
+		InputStream is = new InputStream() {
+			@Override
+			public int read() throws IOException {
+				return 0;
+			}
+		};
+
+		WavefrontLoader wfl = new WavefrontLoader(name);
+		wfl.reserveData(is);
+
+		wfl.loadModel(is);
+		try {
+			is.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		Object3DData data3D = new Object3DData(wfl.getVerts(), wfl.getNormals(), wfl.getTexCoords(), wfl.getFaces(),
+					wfl.getFaceMats(), wfl.getMaterials());
+		data3D.setId(name);
+		//data3D.setAssetsDir(assetDir);
+		// data3D.setDrawMode(GLES20.GL_TRIANGLES);
+		//generateArrays(assets, data3D);
+		if (data3D.getVertexColorsArrayBuffer() != null) {
+			data3D.setVersion(5);
+		} else {
+			data3D.setVersion(3);
+		}
+		return data3D;
+
+	}
+
 
 	public static Object3DData loadV5(AssetManager assets, String assetDir, String assetFilename) {
 		try {

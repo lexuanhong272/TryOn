@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.android.xuanhong.tryonglasses.util.GlassesGallery2;
+
 public class MainScreen extends Activity {
 
     Button btnEditProfile;

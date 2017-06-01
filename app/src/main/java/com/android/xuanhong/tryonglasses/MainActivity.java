@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import java.io.File;
 
+import com.android.xuanhong.tryonglasses.Activities.Welcome;
 import com.android.xuanhong.tryonglasses.models.view.MenuActivity;
 import com.android.xuanhong.tryonglasses.models.view.ModelActivity;
 import com.android.xuanhong.tryonglasses.util.Utils;
@@ -38,7 +39,7 @@ public class MainActivity extends Activity {
 
 
         setContentView(R.layout.activity_main);
-        //MainActivity.this.startActivity(new Intent(MainActivity.this.getApplicationContext(), LoginByEmail.class));
+        MainActivity.this.startActivity(new Intent(MainActivity.this.getApplicationContext(), Welcome.class));
 
 
 
