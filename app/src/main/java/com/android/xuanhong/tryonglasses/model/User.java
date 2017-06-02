@@ -13,6 +13,7 @@ public class User {
     String Gender;
     String Discription;
     String Password;
+    String Avatar;
 
     public String getId() {
         return Id;
@@ -68,5 +69,13 @@ public class User {
 
     public void setPassword(String password) {
         Password = password;
+    }
+
+    public String getAvatar() {
+        return Avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        Avatar = avatar;
     }
 }

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.android.xuanhong.tryonglasses.EditProfile;
+import com.android.xuanhong.tryonglasses.GlassesGallery;
 import com.android.xuanhong.tryonglasses.LoginByEmail;
 import com.android.xuanhong.tryonglasses.MainScreen;
 import com.android.xuanhong.tryonglasses.R;
@@ -22,6 +23,12 @@ public class Welcome extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        Welcome.this.startActivity(new Intent(Welcome.this.getApplicationContext(), Navigation.class));
+        Welcome.this.finish();
+
+//        Welcome.this.startActivity(new Intent(Welcome.this.getApplicationContext(), GlassesGallery.class));
+//        Welcome.this.finish();
 
         btnLoginEmail = (Button) findViewById(R.id.btnLoginEmail);
         btnLoginFace = (Button) findViewById(R.id.btnLoginFace);

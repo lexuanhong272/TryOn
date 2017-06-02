@@ -316,7 +316,7 @@ public class ModelActivity extends Activity {
 		scene.init();
 
 		// Show the Up button in the action bar.
-		setupActionBar();
+		//setupActionBar();
 
 		// TODO: Alert user when there is no multitouch support (2 fingers). He won't be able to rotate or zoom for
 		// example
@@ -376,7 +376,7 @@ public class ModelActivity extends Activity {
 	@Override
 	public void onWindowFocusChanged(boolean hasFocus) {
 		super.onWindowFocusChanged(hasFocus);
-		getActionBar().setHomeButtonEnabled(true);
+		//getActionBar().setHomeButtonEnabled(true);
 		if (hasFocus) {
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 				hideSystemUIDelayed(3000);
@@ -386,7 +386,7 @@ public class ModelActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		getActionBar().setHomeButtonEnabled(true);
+		//getActionBar().setHomeButtonEnabled(true);
 		switch (item.getItemId()) {
 
 			case R.id.s1:

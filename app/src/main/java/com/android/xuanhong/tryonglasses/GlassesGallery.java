@@ -78,14 +78,17 @@ public class GlassesGallery extends Activity {
     }
 
     private void fillList(List<Glass> glasses) {
-        glasses.add(new Glass("102", "Sale of 50%", "900$", R.drawable.g1));
-        glasses.add(new Glass("103", "Sale of 50%", "900$", R.drawable.g2));
-        glasses.add(new Glass("104", "Sale of 50%", "900$", R.drawable.g3));
-        glasses.add(new Glass("105", "Sale of 50%", "900$", R.drawable.g4));
-        glasses.add(new Glass("106", "Sale of 50%", "900$", R.drawable.g5));
-        glasses.add(new Glass("107", "Sale of 50%", "900$", R.drawable.g6));
-        glasses.add(new Glass("1022", "Sale of 50%", "900$", R.drawable.g7));
-        glasses.add(new Glass("1021", "Sale of 50%", "900$", R.drawable.g8));
+        glasses.add(new Glass("1023", "Sale of 50%", "90$", R.drawable.g1));
+        glasses.add(new Glass("1034", "Buy 1 Free 1", "85$", R.drawable.g2));
+        glasses.add(new Glass("1044", "Sale of 20%", "102$", R.drawable.g3));
+        glasses.add(new Glass("1045", "Sale of 10%", "95$", R.drawable.g4));
+        glasses.add(new Glass("106", "Big sale 75%", "90$", R.drawable.g5));
+        glasses.add(new Glass("107", "Sale of 20%", "70$", R.drawable.g6));
+        glasses.add(new Glass("1022", "Not available", "60$", R.drawable.g7));
+        glasses.add(new Glass("1021", "New product", "55$", R.drawable.g8));
+        glasses.add(new Glass("108", "Imported from Iceland", "95$", R.drawable.g9));
+        glasses.add(new Glass("1099", "New production", "100$", R.drawable.g10));
+        glasses.add(new Glass("1099", "Buy 1 Free 1%", "100$", R.drawable.g11));
     }
 
     @Override
