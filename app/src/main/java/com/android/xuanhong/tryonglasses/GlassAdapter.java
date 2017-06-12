@@ -17,7 +17,7 @@ import butterknife.InjectView;
 
 public class GlassAdapter extends SearchAdapter<Glass> {
     class ViewHolder {
-        @InjectView(R.id.txt_id) TextView txt_íd;
+        @InjectView(R.id.txt_id) TextView txt_id;
         @InjectView(R.id.txt_gia) TextView txt_gia;
         @InjectView(R.id.txt_mota) TextView txt_mota;
         @InjectView(R.id.imgv_glass) ImageView imgv_glass;
@@ -43,7 +43,7 @@ public class GlassAdapter extends SearchAdapter<Glass> {
         }
         viewHolder.txt_gia.setText(filteredContainer.get(position).getPrice());
         viewHolder.txt_mota.setText(filteredContainer.get(position).getDescribe());
-        viewHolder.txt_íd.setText(filteredContainer.get(position).getTitle());
+        viewHolder.txt_id.setText(filteredContainer.get(position).getTitle());
         viewHolder.imgv_glass.setImageDrawable(context.getResources().getDrawable(filteredContainer.get(position).getPoster()));
         return convertView;
     }

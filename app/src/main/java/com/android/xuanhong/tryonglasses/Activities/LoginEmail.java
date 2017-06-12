@@ -37,8 +37,11 @@ public class LoginEmail extends Activity {
 
     List<User> userList;
 
-    public static int IDUSER;
-
+    public int IDUSER = 0;
+    public int NUMUSER = 0;
+    public static String NAMEUSER;
+    public static String EMAILUSER;
+    public static byte[] BYTEARRAYAVATAR;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,29 +58,35 @@ public class LoginEmail extends Activity {
         listCall.enqueue(new Callback<List<User>>() {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+
+
+
                 if(response.isSuccessful()){
                     Toast.makeText(LoginEmail.this, "Get user successfully", Toast.LENGTH_SHORT).show();
                     userList = response.body();
-
+                    NUMUSER = userList.size();
                     for(int i = 0; i < userList.size(); i++) {
                         User user = userList.get(i);
 
-                        byte[] bytearrayMTL = Base64.decode(user.getAvatar(), Base64.DEFAULT);
-                        File root1 = android.os.Environment.getExternalStorageDirectory();
-                        File dir1 = new File(root1.getAbsolutePath() + "/DCIM/AVATAR/");
-                        dir1.mkdirs();
-                        File file1 = new File(dir1, (i+1) + ".jpg");
-                        try {
-                            FileOutputStream f = new FileOutputStream(file1);
-                            f.write(bytearrayMTL);
-                            Toast.makeText(LoginEmail.this, "Saved avatar " + user.getId(), Toast.LENGTH_SHORT).show();
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
-                            Toast.makeText(LoginEmail.this, "fffffff", Toast.LENGTH_SHORT).show();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            Toast.makeText(LoginEmail.this, "fffffffdddd", Toast.LENGTH_SHORT).show();
-                        }
+//                        byte[] bytearrayMTL = Base64.decode(user.getAvatar(), Base64.DEFAULT);
+//
+//
+//                        File root1 = android.os.Environment.getExternalStorageDirectory();
+//                        File dir1 = new File(root1.getAbsolutePath() + "/DCIM/AVATAR/");
+//                        dir1.mkdirs();
+//                        File file1 = new File(dir1, (i+1) + ".jpg");
+//                        try {
+//                            FileOutputStream f = new FileOutputStream(file1);
+//
+//                            f.write(bytearrayMTL);
+//                            Toast.makeText(LoginEmail.this, "Saved avatar " + user.getId(), Toast.LENGTH_SHORT).show();
+//                        } catch (FileNotFoundException e) {
+//                            e.printStackTrace();
+//                            Toast.makeText(LoginEmail.this, "fffffff", Toast.LENGTH_SHORT).show();
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                            Toast.makeText(LoginEmail.this, "fffffffdddd", Toast.LENGTH_SHORT).show();
+//                        }
                     }
 
                 }
@@ -101,16 +110,44 @@ public class LoginEmail extends Activity {
 
                 for(int i = 0; i < userList.size(); i++){
                     if(edtEmail.getText().toString().equals(userList.get(i).getEmail()) == true){
+                    //if(edtEmail.getText().toString().equals("q") == true){
                         if(edtPassword.getText().toString().equals(userList.get(i).getPassword()) == true){
+                        //if(edtPassword.getText().toString().equals("1") == true){
                             Toast.makeText(LoginEmail.this, "Log in success", Toast.LENGTH_SHORT).show();
                             IDUSER = i + 1;
-                            LoginEmail.this.startActivity(new Intent(LoginEmail.this.getApplicationContext(), Navigation.class));
-                            LoginEmail.this.finish();
-                            Toast.makeText(LoginEmail.this, "IDUSER = " + IDUSER, Toast.LENGTH_SHORT).show();
+//                            NAMEUSER = userList.get(i).getName();
+//                            EMAILUSER = userList.get(i).getEmail();
+//                            BYTEARRAYAVATAR = Base64.decode(userList.get(i).getAvatar(), Base64.DEFAULT);
+
+
+                            Intent intent = new Intent(LoginEmail.this.getApplicationContext(), Navigation.class);
+
+                            //Chuyển tất cả
+                            Bundle bundle = new Bundle();
+                            bundle.putString("NAMEUSER",userList.get(i).getName());
+                            bundle.putString("EMAILUSER",userList.get(i).getEmail());
+                            bundle.putByteArray("AVATAR", Base64.decode(userList.get(i).getAvatar(), Base64.DEFAULT));
+
+
+                            intent.putExtra("bundle",bundle);
+                            Toast.makeText(LoginEmail.this, userList.get(i).getName(), Toast.LENGTH_SHORT).show();
+                            startActivity(intent);
+                            finish();
+                            Toast.makeText(LoginEmail.this, "aaaa", Toast.LENGTH_SHORT).show();
+
+//
+//
+//
+//                            startActivity(intent);
+//
+//
+//                            LoginEmail.this.startActivity(new Intent(LoginEmail.this.getApplicationContext(), Navigation.class));
+//                            LoginEmail.this.finish();
+//                            Toast.makeText(LoginEmail.this, "IDUSER = " + IDUSER, Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
-                //Toast.makeText(LoginEmail.this, "Log in fail", Toast.LENGTH_SHORT).show();
+
 
 
             }

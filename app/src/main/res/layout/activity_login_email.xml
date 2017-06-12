@@ -24,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:text="lebaonguyen@gmail.com"
             android:id="@id/edtEmail"
             android:textCursorDrawable="@null"
             android:background="#d9ead2"
@@ -54,6 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
         <EditText
+            android:text="baonguyen"
             android:id="@+id/edtPassword"
             android:textCursorDrawable="@null"
             android:backgroundTintMode="add"

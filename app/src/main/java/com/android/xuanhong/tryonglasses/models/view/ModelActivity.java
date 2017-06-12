@@ -2,6 +2,7 @@ package com.android.xuanhong.tryonglasses.models.view;
 
 import java.io.File;
 
+import com.android.xuanhong.tryonglasses.Activities.Navigation;
 import com.android.xuanhong.tryonglasses.GlassesGallery;
 import com.android.xuanhong.tryonglasses.models.services.LoaderObjects;
 import com.android.xuanhong.tryonglasses.models.services.LoaderScenes;
@@ -52,7 +53,7 @@ public class ModelActivity extends Activity {
 
 	Button btnTakePicture, btnAddToCart;
 
-	Button btnBackFromModel;
+	ImageButton btnBackFromModel;
 	ImageButton btnFavorite;
 
 	LinearLayout linearLayoutFavorite;
@@ -106,11 +107,11 @@ public class ModelActivity extends Activity {
 			public void onClick(View v) {
 				if(isPressed){
 					v.setBackgroundResource(R.drawable.heartfull);
-					Toast.makeText(ModelActivity.this, "Add to Favorite!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(ModelActivity.this, "Add to Wish List!", Toast.LENGTH_SHORT).show();
 
 				}else{
 					v.setBackgroundResource(R.drawable.heartempty);
-					Toast.makeText(ModelActivity.this, "Remove from Favorite!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(ModelActivity.this, "Remove from Wish List!", Toast.LENGTH_SHORT).show();
 				}
 				isPressed = !isPressed; // reverse
 
@@ -121,12 +122,13 @@ public class ModelActivity extends Activity {
 
 
 
-		btnBackFromModel = new Button(this);
-		btnBackFromModel.setText("BACK");
+		btnBackFromModel = new ImageButton(this);
+		btnBackFromModel.setImageResource(R.drawable.back3);
+		btnBackFromModel.setBackgroundColor(Color.WHITE);
 		btnBackFromModel.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				ModelActivity.this.startActivity(new Intent(ModelActivity.this.getApplicationContext(), GlassesGallery.class));
+				ModelActivity.this.startActivity(new Intent(ModelActivity.this.getApplicationContext(), Navigation.class));
 			}
 		});
 
@@ -246,39 +248,39 @@ public class ModelActivity extends Activity {
 		});
 
 
-		btnTakePicture = new Button(this);
-		btnTakePicture.setText("Picture");
-		btnTakePicture.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-
-			}
-		});
-
-		btnAddToCart = new Button(this);
-		btnAddToCart.setText("Favorite");
-		btnAddToCart.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-
-			}
-		});
+//		btnTakePicture = new Button(this);
+//		btnTakePicture.setText("Picture");
+//		btnTakePicture.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//
+//			}
+//		});
+//
+//		btnAddToCart = new Button(this);
+//		btnAddToCart.setText("Favorite");
+//		btnAddToCart.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//
+//			}
+//		});
 
 		linearLayoutFavorite = new LinearLayout(this);
-		linearLayoutFavorite.setGravity(Gravity.TOP | Gravity.LEFT);
+		linearLayoutFavorite.setGravity(Gravity.TOP | Gravity.RIGHT);
 		linearLayoutFavorite.addView(btnFavorite);
 
 
 		linearLayoutBackFromModel = new LinearLayout(this);
-		linearLayoutBackFromModel.setGravity(Gravity.TOP | Gravity.RIGHT);
+		linearLayoutBackFromModel.setGravity(Gravity.BOTTOM | Gravity.RIGHT);
 		linearLayoutBackFromModel.addView(btnBackFromModel);
 
 		linearLayoutAddToCart = new LinearLayout(this);
 		linearLayoutAddToCart.setGravity(Gravity.BOTTOM | Gravity.RIGHT);
 		linearLayoutAddToCart.setOrientation(LinearLayout.HORIZONTAL);
 
-		linearLayoutAddToCart.addView(btnTakePicture);
-		linearLayoutAddToCart.addView(btnAddToCart);
+		//linearLayoutAddToCart.addView(btnTakePicture);
+		//linearLayoutAddToCart.addView(btnAddToCart);
 
         linearLayout = new LinearLayout(this);
         linearLayout.setGravity(Gravity.BOTTOM | Gravity.LEFT);
@@ -345,6 +347,13 @@ public class ModelActivity extends Activity {
 		//getMenuInflater().inflate(R.menu.model, menu);
 		getActionBar().setHomeButtonEnabled(true);
 		return true;
+	}
+
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		ModelActivity.this.startActivity(new Intent(ModelActivity.this.getApplicationContext(), Navigation.class));
+        ModelActivity.this.finish();
 	}
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)

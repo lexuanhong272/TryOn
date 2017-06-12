@@ -5,21 +5,24 @@
     android:background="@drawable/bgnavigation">
 
     <ImageView
+        android:id="@+id/imgv_avatar"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/hong"
+        android:src="@drawable/ic_home_24dp"
         android:layout_width="100dp"
         android:layout_height="100dp" />
 
     <TextView
+        android:id="@+id/txt_username"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:textSize="15dp"
-        android:text="Le Xuan Hong"
+        android:text="Le Xuan Hog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/txt_useremail"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:textSize="15dp"
